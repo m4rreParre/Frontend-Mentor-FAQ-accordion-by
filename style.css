@@ -91,9 +91,13 @@ summary::after {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  rotate: -180deg;
+  transition: rotate, 0.5s;
 }
 
 details[open] summary::after {
+  rotate: 180deg;
+  transition: rotate 0.5s;
   background-image: url(assets/images/icon-minus.svg);
 }
 

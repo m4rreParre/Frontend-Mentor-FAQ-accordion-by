@@ -19,7 +19,7 @@ body {
   font-style: normal;
 }
 header {
-  background-image: url(/assets/images/background-pattern-mobile.svg);
+  background-image: url(assets/images/background-pattern-mobile.svg);
   width: 100vw;
   height: 300px;
   background-size: cover;
@@ -102,6 +102,6 @@ details[open] summary::after {
     width: 600px;
   }
   header {
-    background-image: url(/assets/images/background-pattern-desktop.svg);
+    background-image: url(assets/images/background-pattern-desktop.svg);
   }
 }

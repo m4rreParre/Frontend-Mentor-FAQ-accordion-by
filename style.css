@@ -1,0 +1,107 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+  --Hover-purple: hsl(281, 83%, 54%);
+}
+
+body {
+  background-color: var(--Light-pink);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+header {
+  background-image: url(/assets/images/background-pattern-mobile.svg);
+  width: 100vw;
+  height: 300px;
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+footer {
+  color: var(--Dark-purple);
+  position: absolute;
+  bottom: 0;
+}
+.card-container {
+  margin: 20px;
+  position: relative;
+  border-radius: 20px;
+  max-width: 600px;
+  background-color: var(--White);
+  margin-top: -8rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.card-container > h1 > img {
+  width: 35px;
+  margin-left: 30px;
+}
+.card-container > h1 {
+  color: var(--Dark-purple);
+  font-size: 50px;
+  margin-bottom: 0;
+}
+.card-container > ul {
+  padding: 0 2rem;
+}
+.card-container > ul > li {
+  user-select: none;
+  color: var(--Dark-purple);
+  list-style-type: none;
+  font-weight: 700;
+  padding: 20px;
+}
+.card-container > ul > li:hover {
+  color: var(--Hover-purple);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+details > p {
+  font-weight: 500;
+  color: var(--Grayish-purple);
+}
+
+summary::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  display: block;
+  background-image: url(assets/images/icon-plus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+details[open] summary::after {
+  background-image: url(assets/images/icon-minus.svg);
+}
+
+@media (min-width: 640px) {
+  .card-container {
+    width: 600px;
+  }
+  header {
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+  }
+}
